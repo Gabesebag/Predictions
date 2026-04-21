@@ -1,0 +1,16 @@
+let Q1 = 1
+let Q2 = 2
+let Q3 = 3
+let Q4 = 4
+let Q5 = 5
+let Q6 = 6
+let Q7 = 7
+
+let red = 10
+let orange = 20
+let yellow = 30
+let green = 40
+let blue = 50
+let Purple = 60
+let none = 0
+let answer = 0
