@@ -1,17 +1,17 @@
 function setup() {
 	createCanvas(windowWidth, windowHeight);
+	currentScreen = 0;  // Start with title screen
 }
 
-let answer = A + B + C + D + E + F + G + H + I + J
 
 function draw() {
     clear();
-	background('white')
-
+	background('Black')
+    titleScreen()
 
     switch(currentScreen){
         case 0:
-            // Code for the start screen
+            titleScreen();
             break;
         case 1:
             colour();

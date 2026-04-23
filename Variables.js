@@ -81,7 +81,5 @@ let blue = 50
 let Purple = 60
 let none = 0
 
-//
-
 //changeable variables
 let currentScreen = 0

@@ -30,23 +30,23 @@ function colour(){
     }
 
     if (currentScreen == Q7){
-        G = G1
+        G = g1
         // Code for Q7
     }
 
     if (currentScreen == Q8){
-        H = H1
+        H = h1
         // Code for Q8
 
     }
 
     if (currentScreen == Q9){
-        I = I1
+        I = i1
         // Code for Q9
     }
 
     if (currentScreen == Q10){
-        J = J1
+        J = j1
         // Code for Q10
     }
 }
