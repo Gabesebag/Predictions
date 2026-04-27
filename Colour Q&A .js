@@ -1,98 +1,85 @@
 function colourQAs() {
-    //fork
-	if (currentScreen == Q1) {
-		fill('lightblue');
-		rect(windowWidth / 2 - 100, 400, 200, 60, 10);
-		rect(windowWidth / 2 - 100, 480, 200, 60, 10);
+    let buttonX = windowWidth / 2 - 100;
+    let buttonWidth = 200;
 
-		text("Sun", windowWidth / 2, 430);
-		text("Moon", windowWidth / 2, 510);
-		if (mouseX >= buttonX && mouseX <= buttonX + buttonWidth && mouseY >= 400 && mouseY <= 460) {
-			A = a1
-		}
-	}
-    //left 
-	if (currentScreen == Q2) {
-		fill('lightblue');
-		rect(windowWidth / 2 - 100, 400, 200, 60, 10);
-		rect(windowWidth / 2 - 100, 480, 200, 60, 10);
+    // Display current question number in top left
+    fill('white');
+    textSize(16);
+    textAlign(LEFT, TOP);
+    text("Q: " + currentScreen, 20, 20);
 
-		text("Gentle breeze", windowWidth / 2, 430);
-		text("Bright night sky", windowWidth / 2, 510);
-		if (mouseX >= buttonX && mouseX <= buttonX + buttonWidth && mouseY >= 400 && mouseY <= 460) {
-		B = b1
-		}
-	}
-    //Right
-	if (currentScreen == Q3) {
-		fill('lightblue');
-		rect(windowWidth / 2 - 100, 400, 200, 60, 10);
-		rect(windowWidth / 2 - 100, 480, 200, 60, 10);
+    // Clear answer boxes for this question
+    answerBoxes = [];
 
-		text("Gentle", windowWidth / 2, 430);
-		text("Bold", windowWidth / 2, 510);
-		if (mouseX >= buttonX && mouseX <= buttonX + buttonWidth && mouseY >= 400 && mouseY <= 460) {
-		C = c1
-		}
-	}
-    //Left
-	if (currentScreen == Q4) {
-		fill('lightblue');
-		rect(windowWidth / 2 - 100, 400, 200, 60, 10);
-		rect(windowWidth / 2 - 100, 480, 200, 60, 10);
+    // FORK - Question 1
+    if (currentScreen == Q1) {
+        textSize(32);
+        textAlign(CENTER, CENTER);
+        text("Which one do you visually like more?", width / 2, height / 2 - 140);
 
-		text("Yes", windowWidth / 2, 430);
-		text("No", windowWidth / 2, 510);
-		if (mouseX >= buttonX && mouseX <= buttonX + buttonWidth && mouseY >= 400 && mouseY <= 460) {
-		D = d1
-		}
-	}
-    //Left
-	if (currentScreen == Q5) {
-		fill('lightblue');
-		rect(windowWidth / 2 - 100, 400, 200, 60, 10);
-		rect(windowWidth / 2 - 100, 480, 200, 60, 10);
+        answerBoxes.push(new Answerboxes(buttonX, 400, buttonWidth, 60, "Sun", color(173, 216, 230)));
+        answerBoxes.push(new Answerboxes(buttonX, 480, buttonWidth, 60, "Moon", color(173, 216, 230)));
+    }
 
-		text("Calm", windowWidth / 2, 430);
-		text("Creative", windowWidth / 2, 510);
-		if (mouseX >= buttonX && mouseX <= buttonX + buttonWidth && mouseY >= 400 && mouseY <= 460) {
-		E = e1
-		}
-	}
-    //Right
-	if (currentScreen == Q6) {
-		fill('lightblue');
-		rect(windowWidth / 2 - 100, 400, 200, 60, 10);
-		rect(windowWidth / 2 - 100, 480, 200, 60, 10);
+    // LEFT PATH
+    // Left - Question 2
+    if (currentScreen == Q2) {
+        textSize(32);
+        textAlign(CENTER, CENTER);
+        text("Which scenery is more relaxing for you?", width / 2, height / 2 - 140);
 
-		text("Yes", windowWidth / 2, 430);
-		text("No", windowWidth / 2, 510);
-		if (mouseX >= buttonX && mouseX <= buttonX + buttonWidth && mouseY >= 400 && mouseY <= 460) {
-		F = f1
-		}
-	}
-    //Right
-	if (currentScreen == Q7) {
-		fill('lightblue');
-		rect(windowWidth / 2 - 100, 400, 200, 60, 10);
-		rect(windowWidth / 2 - 100, 480, 200, 60, 10);
+        answerBoxes.push(new Answerboxes(buttonX, 400, buttonWidth, 60, "Gentle breeze", color(173, 216, 230)));
+        answerBoxes.push(new Answerboxes(buttonX, 480, buttonWidth, 60, "Bright night sky", color(173, 216, 230)));
+    }
 
-		text("Yes", windowWidth / 2, 430);
-		text("No", windowWidth / 2, 510);
-		if (mouseX >= buttonX && mouseX <= buttonX + buttonWidth && mouseY >= 400 && mouseY <= 460) {
-		G = g1
-		}
-	}
-    //incase
-	if (currentScreen == Q8) {
-		fill('lightblue');
-		rect(windowWidth / 2 - 100, 400, 200, 60, 10);
-		rect(windowWidth / 2 - 100, 480, 200, 60, 10);
+    // Left - Question 4
+    if (currentScreen == Q4) {
+        textSize(32);
+        textAlign(CENTER, CENTER);
+        text("Would you say you are practical and down to Earth?", width / 2, height / 2 - 140);
 
-		text("Colour", windowWidth / 2, 430);
-		text("Number", windowWidth / 2, 510);
-		if (mouseX >= buttonX && mouseX <= buttonX + buttonWidth && mouseY >= 400 && mouseY <= 460) {
-		H = h1
-		}
-	}
+        answerBoxes.push(new Answerboxes(buttonX, 400, buttonWidth, 60, "Yes", color(173, 216, 230)));
+        answerBoxes.push(new Answerboxes(buttonX, 480, buttonWidth, 60, "No", color(173, 216, 230)));
+    }
+
+    // Left - Question 5
+    if (currentScreen == Q5) {
+        textSize(32);
+        textAlign(CENTER, CENTER);
+        text("Which one fits your personality the most?", width / 2, height / 2 - 140);
+
+        answerBoxes.push(new Answerboxes(buttonX, 400, buttonWidth, 60, "Calm", color(173, 216, 230)));
+        answerBoxes.push(new Answerboxes(buttonX, 480, buttonWidth, 60, "Creative", color(173, 216, 230)));
+    }
+
+    // RIGHT PATH
+    // Right - Question 3
+    if (currentScreen == Q3) {
+        textSize(32);
+        textAlign(CENTER, CENTER);
+        text("Do you like it when an art work is gentle on your eyes or bold?", width / 2, height / 2 - 140);
+
+        answerBoxes.push(new Answerboxes(buttonX, 400, buttonWidth, 60, "Gentle", color(173, 216, 230)));
+        answerBoxes.push(new Answerboxes(buttonX, 480, buttonWidth, 60, "Bold", color(173, 216, 230)));
+    }
+
+    // Right - Question 6
+    if (currentScreen == Q6) {
+        textSize(32);
+        textAlign(CENTER, CENTER);
+        text("Are you more optimistic and cheerful by nature?", width / 2, height / 2 - 140);
+
+        answerBoxes.push(new Answerboxes(buttonX, 400, buttonWidth, 60, "Yes", color(173, 216, 230)));
+        answerBoxes.push(new Answerboxes(buttonX, 480, buttonWidth, 60, "No", color(173, 216, 230)));
+    }
+
+    // Right - Question 7
+    if (currentScreen == Q7) {
+        textSize(32);
+        textAlign(CENTER, CENTER);
+        text("Would you consider yourself flamboyant? (easier time with others)", width / 2, height / 2 - 140);
+
+        answerBoxes.push(new Answerboxes(buttonX, 400, buttonWidth, 60, "Yes", color(173, 216, 230)));
+        answerBoxes.push(new Answerboxes(buttonX, 480, buttonWidth, 60, "No", color(173, 216, 230)));
+    }
 }

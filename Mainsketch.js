@@ -54,14 +54,25 @@ function mousePressed() {
 }
 
 function handleAnswerBoxClick(index) {
-    // record the answer if needed, then move to next question
-    if (currentScreen === Q1) currentScreen = Q2;
-    else if (currentScreen === Q2) currentScreen = Q3;
-    else if (currentScreen === Q3) currentScreen = Q4;
+    // Q1 fork - button 0 (Sun) goes RIGHT path, button 1 (Moon) goes LEFT path
+    if (currentScreen === Q1) {
+        if (index === 0) {
+            currentScreen = Q3;  // Sun → right path (Q3)
+        } else {
+            currentScreen = Q2;  // Moon → left path (Q2)
+        }
+    }
+    // LEFT PATH
+    else if (currentScreen === Q2) currentScreen = Q4;
     else if (currentScreen === Q4) currentScreen = Q5;
-    else if (currentScreen === Q5) currentScreen = Q6;
+    else if (currentScreen === Q5) currentScreen = "titleScreen";
+    
+    // RIGHT PATH
+    else if (currentScreen === Q3) currentScreen = Q6;
     else if (currentScreen === Q6) currentScreen = Q7;
     else if (currentScreen === Q7) currentScreen = "titleScreen";
+    
+    // NUMBER QUESTIONS
     else if (currentScreen === NQ1) currentScreen = NQ2;
     else if (currentScreen === NQ2) currentScreen = NQ3;
     else if (currentScreen === NQ3) currentScreen = NQ4;
