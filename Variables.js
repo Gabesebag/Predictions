@@ -82,4 +82,10 @@ let Purple = 60
 let none = 0
 
 //changeable variables
-let currentScreen = 0
+let currentScreen = "titleScreen";
+let playerName = "";  // Store player's name
+let nameInputFocused = false;  // Track if name input is focused
+
+// Result variables
+let resultnumber = 0;
+let resultColour = "Blue";

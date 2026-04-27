@@ -13,35 +13,25 @@
         
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-        }
-        
-        #container {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            background-color: #000000;
+            overflow: hidden;
         }
         
         canvas {
-            border: 1px solid #ccc;
-            background-color: black;
+            display: block;
         }
     </style>
 </head>
 <body>
-    <div id="container"></div>
-    
     <!-- Load p5.js library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
     
     <!-- Load your project files -->
+    <!-- Variables must load first since other files depend on them -->
+    <script src="Variables.js"></script>
     <script src="Mainsketch.js"></script>
     <script src="Begin prediction.js"></script>
     <script src="Colour Q&A .js"></script>
     <script src="Number Q&A .js"></script>
-    <script src="Variables.js"></script>
 </body>
 </html>
