@@ -1,4 +1,4 @@
-function number(){
+function numberQA(){
     if (currentScreen == NQ1){
         // Code for NQ1
     }
