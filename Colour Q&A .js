@@ -77,19 +77,10 @@ function colourQAs() {
     if (currentScreen == Q7) {
         textSize(32);
         textAlign(CENTER, CENTER);
-<<<<<<< HEAD
         text("Would you consider yourself flamboyant? (easier time getting along with others)", width / 2, height / 2 - 140);
 
         answerBoxes.push(new Answerboxes(buttonX, 400, buttonWidth, 60, "Yes", color(173, 216, 230)));
         answerBoxes.push(new Answerboxes(buttonX, 480, buttonWidth, 60, "No", color(173, 216, 230)));
-        clear()
+    
     }
 }
-=======
-        text("Would you consider yourself flamboyant? (easier time with others)", width / 2, height / 2 - 140);
-
-        answerBoxes.push(new Answerboxes(buttonX, 400, buttonWidth, 60, "Yes", color(173, 216, 230)));
-        answerBoxes.push(new Answerboxes(buttonX, 480, buttonWidth, 60, "No", color(173, 216, 230)));
-    }
-}
->>>>>>> e6969dfface5f265d9fc7812c16f275d96b71725

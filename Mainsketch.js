@@ -2,7 +2,6 @@ let questionType = "colour";
 let questionIndicator = 0;
 let questionIndex = 0;
 let answerBoxes = [];
-<<<<<<< HEAD
 
 // Answerboxes class
 class Answerboxes {
@@ -25,12 +24,11 @@ class Answerboxes {
         textAlign(CENTER, CENTER);
         text(this.text, this.x + this.w / 2, this.y + this.h / 2);
     }
-    
+}
     isClicked() {
         return (mouseX >= this.x && mouseX <= this.x + this.w &&
                 mouseY >= this.y && mouseY <= this.y + this.h);
-=======
-
+        }
 function setup() {
 	createCanvas(windowWidth, windowHeight);
 }
@@ -48,7 +46,6 @@ function draw() {
         colourQAs();
     } else if (currentScreen >= NQ1 && currentScreen <= NQ7) {
         numberQA();
->>>>>>> e6969dfface5f265d9fc7812c16f275d96b71725
     }
     // Display answer boxes if we're on a question screen
     answerBoxes.forEach(box => box.display());
